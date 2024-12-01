@@ -2,7 +2,14 @@ import React from "react";
 import "./Navbar.css";
 import { AiFillMessage } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/AuthProvider";
+import { AiOutlineUser } from "react-icons/ai";
+import { useContext } from "react";
+import { FaUserCircle } from "react-icons/fa";
+
 const Navbar = () => {
+  const { auth, logout } = useContext(AuthContext); // 獲取 auth 和 logout 方法
+
   return (
     <div className="Navbar">
       <div className="logo">
@@ -21,12 +28,25 @@ const Navbar = () => {
       </div>
 
       <div className="buttonPart">
-        <Link to="/LoginSignup">
-          <button className="login">登入</button>
-        </Link>
-        <Link to="/LoginSignup">
-          <button className="register">註冊</button>
-        </Link>
+        {auth ? (
+          <>
+            <div className="userIcon">
+              <FaUserCircle size={70} />
+            </div>
+            <button className="logout" onClick={logout}>
+              登出
+            </button>
+          </>
+        ) : (
+          <>
+            <Link to="/LoginSignup">
+              <button className="login">登入</button>
+            </Link>
+            <Link to="/LoginSignup">
+              <button className="register">註冊</button>
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );

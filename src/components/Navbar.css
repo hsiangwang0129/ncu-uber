@@ -77,3 +77,49 @@
   background-color: #00ED64;
   transform: scale(0.95);
 }
+
+.Navbar .userIcon {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+}
+
+.Navbar .userIcon svg{
+  clip-path: circle(50%); /* 裁剪成圓形 */
+  cursor: pointer;
+  color: #608BC1;
+  transition: background-color 0.2s ease;
+}
+
+.Navbar .userIcon svg:hover{
+
+  
+  color: #133E87;
+}
+
+.Navbar .userIcon svg:active{
+
+  
+  color: #133E87;
+}
+
+/* 特定按鈕樣式 */
+.buttonPart .logout {
+  background-color: black;
+  padding: 25px 32px;
+  color: white;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.buttonPart .logout:hover {
+  background-color: #CC2B52;
+  border-radius: 30px;
+}
+
+.buttonPart .logout:active{
+  background-color: #CC2B52;
+  transform: scale(0.95);
+}
