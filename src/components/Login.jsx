@@ -8,7 +8,7 @@ import { AuthContext } from "../context/AuthProvider";
 import { useContext } from "react";
 
 const Login = () => {
-  const { setAuth } = useContext(AuthContext);
+  const { login } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const email = location.state?.email || "";
@@ -38,7 +38,7 @@ const Login = () => {
       if (res.ok) {
         console.log("password Correct!:", data);
         const name = data.name;
-        setAuth({name});
+        login({name:data.name});
         console.log("name:",name); 
         navigate("/");
       } else {
