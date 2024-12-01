@@ -6,9 +6,15 @@ import { AuthContext } from "../context/AuthProvider";
 import { AiOutlineUser } from "react-icons/ai";
 import { useContext } from "react";
 import { FaUserCircle } from "react-icons/fa";
-
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigate = useNavigate();
   const { auth, logout } = useContext(AuthContext); // 獲取 auth 和 logout 方法
+  const isLoggedIn = auth && Object.keys(auth).length > 0;
+  const handleLogout = () => {
+    logout(); 
+    navigate("/");
+  };
 
   return (
     <div className="Navbar">
@@ -28,12 +34,12 @@ const Navbar = () => {
       </div>
 
       <div className="buttonPart">
-        {auth ? (
+        {isLoggedIn ? (
           <>
             <div className="userIcon">
               <FaUserCircle size={70} />
             </div>
-            <button className="logout" onClick={logout}>
+            <button className="logout" onClick={handleLogout}>
               登出
             </button>
           </>

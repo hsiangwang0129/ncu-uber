@@ -1,10 +1,11 @@
 import { createContext } from "react";
 import { useState } from "react";
-
+import { useEffect } from "react";
 export const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
-  const [auth, setAuth] = useState({});
+  const [auth, setAuth] = useState(null); 
+  //const [loading, setLoading] = useState(false); 
 
   const login = (userData) => {
     setAuth(userData);
@@ -17,13 +18,18 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem("auth"); // 清除 localStorage
   };
 
-
+    useEffect(() => {
+        console.log("AuthProvider useEffect called!");
+        const storedAuth = localStorage.getItem("auth");
+        if (storedAuth) {
+        console.log("Stored auth found:", storedAuth);
+        setAuth(JSON.parse(storedAuth)); // 恢復 auth 狀態
+        } else {
+        console.log("No stored auth found.");
+        }
+    }, []);
   
 
-//   加了以下會完全render不出畫面ㄇㄇ
-//   useEffect(() => {
-//     // 可選：在應用啟動時檢查服務器是否驗證用戶有效性
-//   }, []);
 
   return (
     <AuthContext.Provider value={{ auth, setAuth, login, logout }}>
