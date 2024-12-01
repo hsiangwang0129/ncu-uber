@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import Group from "./Group";
-import { GroupContext } from "./GroupProvider";
+import { GroupContext } from "../context/GroupProvider";
 
 function GroupWrapper() {
   const { groups, deleteGroup } = useContext(GroupContext);

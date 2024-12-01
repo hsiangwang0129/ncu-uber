@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import CreateForm from "./CreateForm";
-import { GroupContext } from "./GroupProvider";
+import { GroupContext } from "../context/GroupProvider";
 
 function SearchWrapper() {
 

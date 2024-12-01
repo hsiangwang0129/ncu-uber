@@ -1,16 +1,16 @@
 import React from "react";
-import GroupProvider from "./GroupProvider";
+import AppProvider from "../context/AppProvider";
 import GroupWrapper from "./GroupWrapper";
 import Navbar from "./Navbar";
 import SearchWrapper from "./SearchWrapper";
 
 const HomePage = () => {
     return (
-        <GroupProvider>
+        <AppProvider>
             <Navbar></Navbar>
             <SearchWrapper></SearchWrapper>
             <GroupWrapper></GroupWrapper>
-        </GroupProvider>
+        </AppProvider>
     );
 }
 
