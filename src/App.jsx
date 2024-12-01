@@ -2,7 +2,7 @@
 
 
 import "./App.css";
-
+import AppProvider from "./context/AppProvider";
 
 import React from 'react';
 import { RouterProvider } from "react-router-dom";
@@ -10,7 +10,10 @@ import router from './router/routes';
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <AppProvider>
+      <RouterProvider router={router} />
+    </AppProvider>
+    
   );
 }
 

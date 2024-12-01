@@ -4,8 +4,11 @@ import React from "react";
 import Navbar from "./Navbar";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-const Login = () => {
+import { AuthContext } from "../context/AuthProvider";
+import { useContext } from "react";
 
+const Login = () => {
+  const { setAuth } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const email = location.state?.email || "";
@@ -33,7 +36,10 @@ const Login = () => {
       const data = await res.json();
 
       if (res.ok) {
-        console.log("password Correct!:", data.message);
+        console.log("password Correct!:", data);
+        const name = data.name;
+        setAuth({name});
+        console.log("name:",name); 
         navigate("/");
       } else {
         console.log("Password not found:", data.error);
