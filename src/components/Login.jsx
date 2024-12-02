@@ -38,7 +38,8 @@ const Login = () => {
       if (res.ok) {
         console.log("password Correct!:", data);
         const name = data.name;
-        login({name:data.name});
+        login({id:data.id,name:data.name});
+        console.log("id:",data.id)
         console.log("name:",name); 
         navigate("/");
       } else {

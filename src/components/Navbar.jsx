@@ -13,7 +13,7 @@ const Navbar = () => {
   const isLoggedIn = auth && Object.keys(auth).length > 0;
   const handleLogout = () => {
     logout(); 
-    navigate("/");
+    navigate("/login");
   };
 
   return (
