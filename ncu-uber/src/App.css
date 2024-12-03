@@ -1,0 +1,204 @@
+#root {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 保持內容居中 */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  
+}
+
+body {
+  /* background-color: #3b36cc; */
+  background-color: #001E2B;
+  color: white;
+  display: flex;
+  justify-content: center;
+
+}
+
+.search-wrapper {
+  width: 1000px;
+  
+  padding: 30px 30px 20px 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  color:black;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.create-form {
+  margin-top: 25px;
+  
+  width:100%;
+  
+
+}
+
+.create-form  input{
+  font-weight: bold;
+  font-size: medium;
+  padding-left: 10px;
+  height:60px;
+  background-color: none;
+  color:black 
+}
+
+.datetime-local{
+  width: 200px;
+  font-weight: bold;
+  font-size: medium;
+  padding-left: 10px;
+  padding-right: 10px;
+  height:60px;
+  background-color: none;
+  color:black 
+}
+
+
+.row {
+  margin-top:50px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.row.button{
+  margin-top:0px;
+  justify-content: flex-end;
+  
+}
+.create-form select{
+  width:150px;
+  font-weight: bold;
+  font-size: medium;
+  padding-left: 10px;
+  height:60px;
+  background-color: none;
+  color:black;
+}
+
+.create-form button{
+  margin-top:20px;
+  
+  
+  padding: 25px 32px;
+  background-color: #3b36cc;
+  border-radius: 5px;
+  color:white;
+  border:None;
+  transition: transform 0.2s ease, background-color 0.2s ease; /* 添加平滑過渡效果 */
+
+}
+.create-form button:hover{
+  background-color: #00ED64;
+  border-radius: 30px;
+  
+}
+.create-form button:active{
+  background-color: #00ED64;
+  transform: scale(0.95);
+}
+
+
+.group-wrapper {
+  margin-top:50px;
+  padding:50px;
+  width: 95%;
+  background-color: #f0f2f5;  
+  /* #f0f2f5 */
+  /* #21313C */
+  color:black;
+  border-radius: 40px;
+  /* min-height: 100vh; */
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.group {
+  background-color: white;
+  width:50%;
+  padding: 30px;
+  margin-top :10px;
+  border-radius: 15px;
+  border: 3px solid black;
+  text-align: left;
+  
+}
+
+.ownergroup {
+  background-color: black;
+  width:50%;
+  padding: 30px;
+  margin-top :10px;
+  border-radius: 15px;
+  border: 3px solid black;
+  text-align: left;
+  color:white;
+}
+
+.group button{
+  
+  
+  width:100px;
+  padding: 25px 32px;
+  background-color: #3b36cc;
+  /* border-radius: 5px; */
+  color:white;
+  border:None;
+  transition: background-color 0.2s ease; /* 添加平滑過渡效果 */
+
+}
+.group button:hover{
+  background-color: #00ED64;
+  border-radius: 30px;
+}
+.group button:active{
+  background-color: #349010;
+  transform: scale(0.95);
+}
+
+.transparent button{
+  width:100px;
+  padding: 25px 32px;
+  background-color: black;
+  /* border-radius: 5px; */
+  color:black;
+  border:None;
+  display: flex;
+  cursor:default;
+  justify-content: flex-end;
+}
+
+.group .row.button{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete-icon {
+  color: white;
+  cursor: pointer;
+  transition: color 0.2s ease; /* 添加平滑過渡效果 */
+}
+
+.delete-icon:hover {
+  color: red;
+}
+
+.delete-icon:active {
+  color: darkred;
+}
+
+.group .quitbutton {
+  background-color: #CC2B52;
+}
+
+.group .quitbutton:hover{
+  background-color: red;
+  
+}
