@@ -19,7 +19,7 @@ A web application that facilitates carpooling among students, reducing transport
 - Frontend: React.js + React Router
 - Backend: Node.js + Express.js
 - Database: MongoDB + Mongoose
-- Deployment: Heroku (or your cloud provider)
+- Deployment: AWS Elastic Beanstalk (EC2 + Load Balancer)
 - Others: Axios, Context API, Google Maps API
 
 ---
