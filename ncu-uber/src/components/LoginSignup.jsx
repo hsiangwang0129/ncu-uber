@@ -6,14 +6,14 @@ import { useNavigate } from "react-router-dom";
 
 const LoginSignup = () => {
   const [email, setEmail] = useState("");
-  
+  const apiurl = import.meta.env.VITE_BACKEND_URL;
   
   const navigate = useNavigate();
   const handleSubmit = async(e) => {
     e.preventDefault();
     const checkuser = { email };
     try {
-      const res = await fetch("http://localhost:4000/api/users", {
+      const res = await fetch(`http://${apiurl}/api/users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

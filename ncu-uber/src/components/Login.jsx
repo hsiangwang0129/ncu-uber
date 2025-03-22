@@ -13,6 +13,7 @@ const Login = () => {
   const navigate = useNavigate();
   const email = location.state?.email || "";
   const [password,setPassword] = useState("");
+  const apiurl = import.meta.env.VITE_BACKEND_URL;
   useEffect(() => {
     if (!email) {
       // 如果 email 不存在，重定向到 /loginsignup
@@ -25,7 +26,7 @@ const Login = () => {
   const handelSubmit = async(e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:4000/api/users/login", {
+      const res = await fetch(`http://${apiurl}/api/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

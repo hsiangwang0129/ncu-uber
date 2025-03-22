@@ -1,0 +1,31 @@
+.coffee-group {
+    background-color: #21313c;
+    border-radius: 5px;
+    border:2px solid white;
+    width:30%;
+    color:white;
+    padding:30px;
+    transition: box-shadow 0.3s ease;
+    margin:10px;
+}
+
+.coffee-group:hover{
+    box-shadow: 10px 10px 20px rgba(15, 15, 15);
+}
+
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.linkbutton {
+    cursor: pointer;
+    color:white;
+}
+
+img {
+    border-radius: 5px;
+    border:1px solid white;
+}
+

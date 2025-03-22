@@ -5,6 +5,7 @@ import LoginSignup from '../components/LoginSignup'
 import Login from '../components/login';
 import Signup from '../components/Signup';
 
+import CoffeePage from '../components/CoffeePage';
 
 // 定義路由陣列
 const routes = [
@@ -23,6 +24,10 @@ const routes = [
   {
     path: "/signup",
     element: <Signup/>,
+  },
+  {
+    path: "/coffeemap",
+    element: <CoffeePage/>,
   }
 //   {
 //     path: "*", // 萬用路徑（找不到時顯示的頁面）

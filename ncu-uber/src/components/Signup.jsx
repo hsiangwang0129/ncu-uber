@@ -9,7 +9,8 @@ const Signup = () => {
   const [name,setName] = useState("");
   const [password,setPassword] = useState("");
   const [comfirmPwd,setCofirmPwd] = useState("");
-
+  const apiurl = import.meta.env.VITE_BACKEND_URL;
+  
   useEffect(() => {
     if (!email) {
       navigate("/LoginSignup");
@@ -25,7 +26,7 @@ const Signup = () => {
     
     try {
 
-      const res = await fetch("http://localhost:4000/api/users/signup", {
+      const res = await fetch(`http://${apiurl}/api/users/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

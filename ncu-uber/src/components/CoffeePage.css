@@ -1,0 +1,30 @@
+.coffee-page {
+    width:100%;
+    text-align: center;
+}
+.coffee-page input {
+    width: 50%;
+    height: 80px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: medium;
+    padding-left: 50px;
+    border-radius: 50px;
+}
+.coffee-page  button {
+    background-color: #00ED64;
+    border-radius: 50px;
+    height: 80px;
+    width: 8%;
+    cursor: pointer;
+}
+
+.coffee-page  button:hover {
+    background-color: #04ed00;
+    border-radius: 50px;
+    height: 80px;
+    width: 8%;
+    border:2px solid white;
+    color:white;
+}

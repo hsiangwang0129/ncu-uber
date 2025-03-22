@@ -31,6 +31,13 @@ const Navbar = () => {
         <a>
           <button>簡介</button>
         </a>
+        
+          <Link to="/coffeemap">
+            <button>咖啡地圖</button>
+          </Link>
+          
+
+        
       </div>
 
       <div className="buttonPart">
@@ -45,10 +52,10 @@ const Navbar = () => {
           </>
         ) : (
           <>
-            <Link to="/LoginSignup">
+            <Link to="/loginsignup">
               <button className="login">登入</button>
             </Link>
-            <Link to="/LoginSignup">
+            <Link to="/loginsignup">
               <button className="register">註冊</button>
             </Link>
           </>

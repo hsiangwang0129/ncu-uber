@@ -1,15 +1,21 @@
 // GroupProvider.jsx
 import { createContext, useEffect, useState } from "react";
 
+
 export const GroupContext = createContext();
+
+
 
 function GroupProvider({ children }) {
   const [groups, setGroups] = useState([]);
+  const apiurl = import.meta.env.VITE_BACKEND_URL;
+  // const apiurl = 'localhost:4000';
 
   useEffect(() => {
     const fetchData = async () => {
+
       try {
-        const res = await fetch("http://localhost:4000/api/groups");
+        const res = await fetch(`http://${apiurl}/api/groups`);
         const data = await res.json();
         setGroups(data.items);
       } catch (error) {
@@ -35,7 +41,7 @@ function GroupProvider({ children }) {
     };
 
     try {
-      const res = await fetch("http://localhost:4000/api/groups", {
+      const res = await fetch(`http://${apiurl}/api/groups`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -53,9 +59,13 @@ function GroupProvider({ children }) {
   };
 
   const addMember = async (groupId, userId) => {
+    if(!userId){
+      alert("請先登入再加入群組");
+      return;
+    }
     try {
       const res = await fetch(
-        `http://localhost:4000/api/groups/${groupId}/join`,
+        `http://${apiurl}/api/groups/${groupId}/join`,
         {
           method: "POST",
           headers: {
@@ -85,7 +95,7 @@ function GroupProvider({ children }) {
   const removeMember = async (groupId, userId) => {
     try {
       const res = await fetch(
-        `http://localhost:4000/api/groups/${groupId}/drop`,
+        `http://${apiurl}/api/groups/${groupId}/drop`,
         {
           method: "POST",
           headers: {
@@ -114,7 +124,7 @@ function GroupProvider({ children }) {
 
   const deleteGroup = async (id) => {
     try {
-      const res = await fetch(`http://localhost:4000/api/groups/${id}`, {
+      const res = await fetch(`http://${apiurl}/api/groups/${id}`, {
         method: "DELETE",
       });
       if (!res.ok) {
