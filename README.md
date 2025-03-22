@@ -70,15 +70,6 @@ npm run dev
 
 ---
 
-## 📝 Contributing
-
-1. Fork this repository
-2. Create your feature branch (`git checkout -b feature/YourFeature`)
-3. Commit your changes (`git commit -m 'feat: add new feature'`)
-4. Push to the branch (`git push origin feature/YourFeature`)
-5. Open a Pull Request
-
----
 
 ## 📄 License
 
@@ -88,5 +79,14 @@ npm run dev
 
 ## 📷 Screenshots
 
-> _Add some UI screenshots here later to enhance documentation._
+<img width="1710" alt="image" src="https://github.com/user-attachments/assets/eb099c7d-90d0-472d-8608-a32e3b2afa94" />
+<img width="1710" alt="image" src="https://github.com/user-attachments/assets/a48c1ec7-5cf9-4020-802e-98d8881aa75a" />
+<img width="1710" alt="image" src="https://github.com/user-attachments/assets/9386e6a9-fd30-478f-9cc2-0ac817b2d63e" />
+<img width="1710" alt="image" src="https://github.com/user-attachments/assets/51b5424d-fff3-4118-a2bc-6bfaf952dc2c" />
+<img width="1710" alt="image" src="https://github.com/user-attachments/assets/2387a3c0-41f9-434f-81fa-a2bac20b6f73" />
+<img width="1710" alt="image" src="https://github.com/user-attachments/assets/afca4bd0-734d-4bfa-89bd-cbe9a6070221" />
+
+
+
+
 
